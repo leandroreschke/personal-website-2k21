@@ -1,0 +1,107 @@
+.radio {
+  --border-width: .2rem;
+  display: flex;
+  cursor: pointer;
+  font-size: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio.inline {
+  display: inline-flex;
+}
+
+.radio input {
+  display: none;
+}
+
+.radio input + span {
+  color: hsl(var(--text-color));
+  position: relative;
+  display: flex;
+  transition: color .3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio input + span:before,
+.radio input + span:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.radio input + span:before {
+  height: 1.6em;
+  border: var(--border-width) solid transparent;
+  background: hsl(var(--bg-color));
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.radio input + span:after {
+  transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.radio input:checked + span:before {
+  background: hsla(var(--primary-bg-color), .15);
+  border-color: transparent;
+}
+
+.radio input:checked + span:after {
+  transition: opacity 0.3s ease, background 0.3s ease, transform 0.6s cubic-bezier(0.175, 0.88, 0.32, 1.2);
+}
+
+.radio input:checked + span {
+  color: hsl(var(--primary-text-color));
+  font-weight: bold;
+}
+
+.radio:hover input:not(:checked) + span:before {
+  border-color: hsla(var(--primary-text-color), .5);
+  background: transparent;
+}
+
+.radio:hover input:not(:checked) + span {
+  color: hsla(var(--primary-text-color), .9);
+}
+
+.radio:hover input:checked + span:before {
+  border-color: hsla(var(--primary-text-color), 1);
+}
+
+.radio input + span {
+  padding-left: 2em;
+}
+
+.radio input + span:not(:empty) {
+  padding-left: 2.5em;
+}
+
+.radio input + span:before {
+  width: 1.6em;
+}
+
+.radio input + span:after {
+  opacity: 0;
+}
+
+.radio input:checked + span:after {
+  opacity: 1;
+}
+
+.radio input + span:before, .radio input + span:after {
+  border-radius: 50%;
+}
+.radio input + span:after {
+  width: 1.6em;
+  height: 1.6em;
+  background: hsla(var(--primary-bg-color), 1);
+  opacity: 0;
+  transform: scale(0.6);
+}
+.radio input:checked + span:after {
+  background: hsla(var(--primary-text-color), 1);
+  transform: scale(0.4);
+}

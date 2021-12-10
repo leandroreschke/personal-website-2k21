@@ -1,0 +1,99 @@
+.switch {
+  --border-width: .2rem;
+  margin-top: 2.5em;
+  display: flex;
+  cursor: pointer;
+  font-size: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch.inline {
+  display: inline-flex;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch input + span {
+  color: hsl(var(--text-color));
+  position: relative;
+  display: flex;
+  transition: color .3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch input + span:before,
+.switch input + span:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.switch input + span:before {
+  height: 1.6em;
+  border: var(--border-width) solid transparent;
+  background: hsl(var(--bg-color));
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.switch input + span:after {
+  transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.switch input:checked + span:before {
+  background: hsla(var(--primary-bg-color), .15);
+  border-color: transparent;
+}
+
+.switch input:checked + span:after {
+  transition: opacity 0.3s ease, background 0.3s ease, transform 0.6s cubic-bezier(0.175, 0.88, 0.32, 1.2);
+}
+
+.switch input:checked + span {
+  color: hsl(var(--primary-text-color));
+  font-weight: bold;
+}
+
+.switch:hover input:not(:checked) + span:before {
+  border-color: hsla(var(--primary-text-color), .5);
+  background: transparent;
+}
+
+.switch:hover input:not(:checked) + span {
+  color: hsla(var(--primary-text-color), .9);
+}
+
+.switch:hover input:checked + span:before {
+  border-color: hsla(var(--primary-text-color), 1);
+}
+
+.switch input + span {
+  padding-left: 3.8em;
+}
+.switch input + span:not(:empty) {
+  padding-left: 3.5em;
+}
+.switch input + span:before {
+  width: 2.8em;
+  border-radius: 1.2em;
+}
+.switch input + span:after {
+  left: .4em;
+  top: .32em;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  background: hsl(var(--border));
+}
+.switch input:checked + span:after {
+  background: hsla(var(--primary-text-color), 1);
+  transform: translateX(100%) scale(0.9);
+}
+.switch:hover input:not(:checked) + span:after {
+  background: hsla(var(--primary-text-color), .5);
+}

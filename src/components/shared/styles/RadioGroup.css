@@ -1,0 +1,65 @@
+.radio-group {
+  margin-top: 2.5em;
+  --border-width: .1rem;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.radio-group label {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-group label input {
+  display: none;
+}
+
+.radio-group label input + span {
+  display: block;
+  position: relative;
+  padding: .6em 1.0em;
+  color: hsl(var(--tex));
+  border: var(--border-width) solid hsl(var(--border));
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.radio-group label input:checked + span {
+  z-index: 16;
+  background: hsla(var(--primary-bg-color), .15);
+  border-color: hsl(var(--primary-bg-color));
+  color: hsl(var(--primary-text-color));
+  font-weight: bold;
+}
+
+.radio-group label:hover input + span {
+  z-index: 15;
+  border-color: hsl(var(--primary-bg-color));
+}
+
+.radio-group label:first-child input + span {
+  border-radius: .6em 0 0 .6em;
+}
+
+.radio-group label:last-child input + span {
+  border-radius: 0 .6em .6em 0;
+}
+
+.radio-group label:not(:first-child) {
+  margin-left: calc(var(--border-width) * -1);
+}
+
+.radio-group_label {
+  font-weight: bold;
+  position: absolute;
+  transform: translate(.2em, .6em);
+  color: hsl(var(--base-color));
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+  font-size: 1.6rem;
+  user-select: none;
+}
