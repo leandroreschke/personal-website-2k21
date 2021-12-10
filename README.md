@@ -1,4 +1,4 @@
-# vue-personal-website
+# personal-website-2k21
 
 ## Project setup
 ```
