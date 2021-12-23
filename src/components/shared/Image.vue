@@ -1,6 +1,6 @@
 <template>
   <div :href="link" class="image">
-    <img :src="src">
+    <img :src="src" rel="preload">
     <div v-if="description !== undefined" class="description p-1">
       <slot />
     </div>
@@ -28,7 +28,7 @@ export default {
   .rounded img{
     border-radius: 290486rem;
   }
-
+  
   .semiround img{
     border-radius: 3rem;
   }
