@@ -5,7 +5,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 
 import SubMenu from '../shared/SubMenu.vue';
 import Row from '../shared/Row.vue';

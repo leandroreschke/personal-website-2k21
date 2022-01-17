@@ -11,7 +11,7 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import Header from './components/layout/Header.vue';
 import { useRoute } from 'vue-router';

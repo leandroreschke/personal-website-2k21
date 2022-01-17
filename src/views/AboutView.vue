@@ -2,7 +2,7 @@
   <Column>
     <Row class="wrap">
       <Column>
-        <Image class="maxw-2 mb-1 gap-1 self-center" :src="require('@/assets/images/about/LeandroReschke.png')">
+        <Image :width="300" :height="248" class="maxw-2 mb-1 gap-1 self-center" :src="LeandroReschke" :placeholder="LeandroReschke_P">
         </Image>
       </Column>
       <Column class="half">
@@ -37,7 +37,11 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
+
+import LeandroReschke from '@/assets/images/about/LeandroReschke.png'
+import LeandroReschke_P from '@/assets/images/about/LeandroReschke_P.png'
+
 import Column from '../components/shared/Column.vue';
 import Row from '../components/shared/Row.vue';
 import Image from '../components/shared/Image.vue';

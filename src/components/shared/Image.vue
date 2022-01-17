@@ -1,21 +1,32 @@
 <template>
   <div :href="link" class="image">
-    <img :src="src" rel="preload">
-    <div v-if="description !== undefined" class="description p-1">
+    <img :width="width" :height="height" @load="imageLoaded" :src="src" rel="preload" v-show="isLoaded">
+    <img :width="width" :height="height" :src="placeholder" v-if="!isLoaded">
+    <div v-if="description" class="description p-1">
       <slot />
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Image",
-  props: {
-    src: String,
-    description: String,
-    link: String
-  }
-};
+<script setup lang="ts">
+
+import { ref } from 'vue';
+
+defineProps({
+  src: String,
+  placeholder: String,
+  description: Boolean,
+  link: String,
+  width: Number,
+  height: Number,
+})
+
+let isLoaded = ref(false);
+
+const imageLoaded = () => {
+  isLoaded.value = true;
+}
+
 </script>
 
 <style scoped>
@@ -49,6 +60,7 @@ export default {
     height: 40%;
     bottom: -10%;
   }
+  
   .center .description {
     justify-content: center;
     background: radial-gradient(ellipse closest-side, hsla(var(--card-bg-color), .75) 60%, transparent);

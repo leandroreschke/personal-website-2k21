@@ -11,7 +11,7 @@
   </router-link>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Card from "./Card.vue"
 import { useRoute } from 'vue-router';
 

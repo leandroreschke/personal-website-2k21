@@ -14,7 +14,7 @@
   </label>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import { RandomID } from '../../utility/Helpers';
 

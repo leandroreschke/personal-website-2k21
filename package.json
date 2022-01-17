@@ -1,23 +1,22 @@
 {
-  "name": "vue-personal-website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-project",
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "pinia": "^2.0.9",
+    "vue": "^3.2.26",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@types/node": "^16.11.17",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "typescript": "~4.5.4",
+    "vite": "^2.7.7",
+    "vue-tsc": "^0.29.8"
+  }
 }

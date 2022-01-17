@@ -110,7 +110,7 @@
 
 @font-face {
   font-family: Inter;
-  src: url(./fonts/Inter.ttf);
+  src: url(./assets/fonts/Inter.ttf);
 }
 
 /* ==================== END CONSTRUCTOR ==================== */
@@ -496,12 +496,6 @@ pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 ul {
@@ -2293,7 +2287,7 @@ button.dropdown-item {
 }
 
 
-.capitalize {
+.capitalize::first-letter {
   text-transform: capitalize;
 }
 
