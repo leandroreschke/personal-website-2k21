@@ -11,7 +11,7 @@
 <script setup lang="ts">
 
 import { computed, ref } from '@vue/reactivity';
-import Card from './Card'
+import Card from './Card.vue'
 
 const props = defineProps({
   title: String,

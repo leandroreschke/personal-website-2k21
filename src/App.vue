@@ -17,7 +17,7 @@ import Header from './components/layout/Header.vue';
 import { useRoute } from 'vue-router';
 import { computed } from '@vue/reactivity';
 
-const menus =  [
+const menus = [
   {url:'/', text: '<', tooltip: 'Go Home'},
   {url:'/portfolio', text: 'Portfolio', tooltip:'Underconstruction'},
   {url:'/about', text: 'About'}

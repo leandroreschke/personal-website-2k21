@@ -18,13 +18,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Dropdown",
-  props: {
-    menuItems: Array
-  },
-};
+<script setup lang="ts">
+  defineProps({
+    menuItems: Array as () => {divider: String, method: (payload: MouseEvent) => void, name: String}[]
+  });
 </script>
 
 

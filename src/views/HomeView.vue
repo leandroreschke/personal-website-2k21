@@ -7,19 +7,21 @@
           <hr class="mx-1"/>
           <p class="text-center">programmer • artist</p>
         </Image>
-        
         <span class="fs-3 text-center">Hi! I work as a Front-End Software Engineer & I'm doing Art / Games as a hobby</span>
       </Column>
     </Row>  
     <Row class="mb-1 gapx-1 wrap content-center">
       <router-link to="/portfolio" tooltip="Underconstruction" flow="up"><Button class="primary fs-3">Portfolio</Button></router-link>
       <router-link to="/about" tooltip="About me" flow="up"><Button class="primary outline fs-3">About</Button></router-link>
+      <Select name="Abacate" :options="[{name: 'ticaracati', value:'ticaracta'}]">O pora</Select>
     </Row>
     <Row class="gap-1 wrap content-center">
       <template v-for="showcaseImage in showcaseImages">
         <Image :width="320" :height="145" :style="gifSize" :src="showcaseImage.image" :placeholder="showcaseImage.placeholder"/>
+        
       </template>
     </Row>
+
     <Row class="m-1 content-evenly self-center third">
       <small class="text-center">•</small>
       <small class="text-center">•</small>
@@ -68,11 +70,12 @@ import TicTacToe3D_P from '@/assets/images/home/TicTacToe3D_P.gif'
 import Testimonial1 from '@/assets/images/home/testimonial1.jpg'
 import Testimonial3 from '@/assets/images/home/testimonial3.jpg'
 
-import Card from '../components/shared/Card.vue'
-import Button from '../components/shared/Button.vue';
-import Row from '../components/shared/Row.vue';
-import Column from '../components/shared/Column.vue';
-import Image from '../components/shared/Image.vue';
+import Card from '@/components/shared/Card.vue'
+import Button from '@/components/shared/Button.vue';
+import Row from '@/components/shared/Row.vue';
+import Column from '@/components/shared/Column.vue';
+import Image from '@/components/shared/Image.vue';
+import Select from '@/components/shared/Select.vue'
 
 const gifSize = {maxWidth: '32rem', maxHeight: '14.53rem'};
 

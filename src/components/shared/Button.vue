@@ -1,14 +1,14 @@
 <template>
-  <button
-  @click="click">
+  <button @click="click">
     <slot />
   </button>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts">import { PropType } from 'vue';
+
 
 defineProps ({
-  click: Function
+  click: Function as PropType<(payload: MouseEvent) => void>
 })
 
 </script>

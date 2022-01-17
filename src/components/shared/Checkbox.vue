@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 
+import { PropType } from 'vue';
 import { RandomID } from '../../utility/Helpers';
 
 const id = RandomID()
@@ -23,12 +24,12 @@ const id = RandomID()
 defineProps({
   name: String, 
   label: String, 
-  keypress: Function, 
-  focus: Function, 
+  keypress: Function as PropType<(payload: KeyboardEvent) => void>, 
+  focus: Function as PropType<(payload: FocusEvent) => void>, 
   required: Boolean, 
   readonly: Boolean, 
   checked: Boolean, 
-  onChange: Function
+  onChange: Function as PropType<(payload: Event) => void>
 })
 
 </script>
