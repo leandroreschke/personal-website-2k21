@@ -54,8 +54,8 @@
 
 <script setup lang="ts">
 
-import HeroImage from '@/assets/images/home/HeroImage.png'
-import HeroImage_P from '@/assets/images/home/HeroImage_P.png'
+import HeroImage from '@/assets/images/home/HeroImage.PNG'
+import HeroImage_P from '@/assets/images/home/HeroImage_P.PNG'
 import Asteroid from '@/assets/images/home/Asteroid.gif' 
 import Asteroid_P from '@/assets/images/home/Asteroid_P.gif'
 import MCInformatica from '@/assets/images/home/MCInformatica.gif' 
