@@ -2,23 +2,21 @@
   <Column>
     <Row class="mb-1 gapx-1 wrap content-center">
       <Column>
-        <Image :width="300" :height="300" class="mb-1 gap-1 self-center" :src="SelfPortrait" :placeholder="SelfPortrait_P" description>
+        <Image :width="300" :height="300" class="mb-1 gap-1 self-center" :src="HeroImage" :placeholder="HeroImage_P" description>
           <h3 class="text-center">Leandro Reschke</h3>
           <hr class="mx-1"/>
           <p class="text-center">programmer • artist</p>
         </Image>
-        <span class="fs-3 text-center">Hi! I work as a Front-End Software Engineer & I'm doing Art / Games as a hobby</span>
+        <span class="fs-3 mt-4 text-center">Hi! I work as a Front-End Software Engineer & I'm doing Art / Games as a hobby</span>
       </Column>
     </Row>  
     <Row class="mb-1 gapx-1 wrap content-center">
       <router-link to="/portfolio" tooltip="Underconstruction" flow="up"><Button class="primary fs-3">Portfolio</Button></router-link>
       <router-link to="/about" tooltip="About me" flow="up"><Button class="primary outline fs-3">About</Button></router-link>
-      <Select name="Abacate" :options="[{name: 'ticaracati', value:'ticaracta'}]">O pora</Select>
     </Row>
     <Row class="gap-1 wrap content-center">
       <template v-for="showcaseImage in showcaseImages">
         <Image :width="320" :height="145" :style="gifSize" :src="showcaseImage.image" :placeholder="showcaseImage.placeholder"/>
-        
       </template>
     </Row>
 
